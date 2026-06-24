@@ -60,7 +60,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Find healthy, vaccinated, ethically raised puppies in Delhi NCR. 19+ premium breeds. Call or WhatsApp +91 93111 31742.",
+          "Find healthy, vaccinated, ethically raised puppies in Delhi NCR. 19+ premium breeds. Call or WhatsApp +91 92051 22992.",
       },
       { property: "og:title", content: "The Puppy Point — Premium Puppies in Delhi NCR" },
       {
@@ -73,9 +73,9 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const PHONE = "+919311131742";
-const PHONE_DISPLAY = "+91 93111 31742";
-const WA = "https://wa.me/919311131742";
+const PHONE = "+919205122992";
+const PHONE_DISPLAY = "+91 92051 22992";
+const WA = "https://wa.me/919205122992";
 
 const breeds = [
   {
@@ -1056,7 +1056,7 @@ function Contact() {
               .filter((l) => l !== null)
               .join("\n");
 
-            const waUrl = `https://wa.me/919311131742?text=${encodeURIComponent(lines)}`;
+            const waUrl = `https://wa.me/919205122992?text=${encodeURIComponent(lines)}`;
             setSent(true);
             // Small delay so user sees success state before WhatsApp opens
             setTimeout(() => {
