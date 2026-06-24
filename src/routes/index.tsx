@@ -622,6 +622,10 @@ function Breeds() {
 }
 
 function BreedCard({ breed, index }: { breed: (typeof breeds)[number]; index: number }) {
+  const isVowel = /^[aeiou]/i.test(breed.name);
+  const message = `Hi! I am interested in ${isVowel ? "an" : "a"} ${breed.name} puppy.`;
+  const breedWaUrl = `https://wa.me/919205122992?text=${encodeURIComponent(message)}`;
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 30 }}
@@ -661,7 +665,7 @@ function BreedCard({ breed, index }: { breed: (typeof breeds)[number]; index: nu
             <span className="hidden xs:inline">Call</span><span className="xs:hidden">📞</span>
           </a>
           <a
-            href={WA}
+            href={breedWaUrl}
             target="_blank"
             rel="noopener"
             className="flex flex-1 items-center justify-center gap-1 rounded-full bg-whatsapp px-2 py-2 text-[10px] font-semibold text-white transition hover:opacity-90 sm:gap-1.5 sm:px-3 sm:py-2.5 sm:text-xs"
