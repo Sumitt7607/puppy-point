@@ -60,7 +60,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Find healthy, vaccinated, ethically raised puppies in Delhi NCR. 19+ premium breeds. Call or WhatsApp +91 92051 22992.",
+          "Find healthy, vaccinated, ethically raised puppies in Delhi NCR. 19+ premium breeds. Call or WhatsApp +91 98701 66623.",
       },
       { property: "og:title", content: "The Puppy Point — Premium Puppies in Delhi NCR" },
       {
@@ -73,9 +73,9 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const PHONE = "+919205122992";
-const PHONE_DISPLAY = "+91 92051 22992";
-const WA = "https://wa.me/919205122992";
+const PHONE = "+919870166623";
+const PHONE_DISPLAY = "+91 98701 66623";
+const WA = "https://wa.me/919870166623";
 
 const breeds = [
   {
@@ -624,7 +624,7 @@ function Breeds() {
 function BreedCard({ breed, index }: { breed: (typeof breeds)[number]; index: number }) {
   const isVowel = /^[aeiou]/i.test(breed.name);
   const message = `Hi! I am interested in ${isVowel ? "an" : "a"} ${breed.name} puppy.`;
-  const breedWaUrl = `https://wa.me/919205122992?text=${encodeURIComponent(message)}`;
+  const breedWaUrl = `https://wa.me/919870166623?text=${encodeURIComponent(message)}`;
 
   return (
     <motion.article
@@ -1060,7 +1060,7 @@ function Contact() {
               .filter((l) => l !== null)
               .join("\n");
 
-            const waUrl = `https://wa.me/919205122992?text=${encodeURIComponent(lines)}`;
+            const waUrl = `https://wa.me/919870166623?text=${encodeURIComponent(lines)}`;
             setSent(true);
             // Small delay so user sees success state before WhatsApp opens
             setTimeout(() => {
