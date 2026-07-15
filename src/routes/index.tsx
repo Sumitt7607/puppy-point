@@ -55,19 +55,28 @@ import blackGermanShepherdImg from "@/assets/black-german-shepherd.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    title: "Buy Puppies in Delhi NCR | The Puppy Point — 19+ Premium Breeds",
     meta: [
-      { title: "The Puppy Point — Premium Puppies in Delhi NCR" },
       {
         name: "description",
         content:
-          "Find healthy, vaccinated, ethically raised puppies in Delhi NCR. 19+ premium breeds. Call or WhatsApp +91 98701 66623.",
+          "Buy healthy, vaccinated puppies in Delhi, Gurgaon, Noida, Ghaziabad & Faridabad. 19+ premium breeds — Golden Retriever, Labrador, Pomeranian, Shih Tzu, Husky, German Shepherd & more. WhatsApp +91 98701 66623 for instant reply.",
       },
-      { property: "og:title", content: "The Puppy Point — Premium Puppies in Delhi NCR" },
+      {
+        name: "keywords",
+        content:
+          "buy puppies Delhi NCR, puppies for sale Delhi, dog for sale Delhi, Golden Retriever puppy Delhi, Labrador puppy Noida, Pomeranian puppy Gurgaon, Shih Tzu puppy Delhi, German Shepherd puppy Delhi NCR, Siberian Husky puppy Delhi, Beagle puppy Delhi, French Bulldog puppy Delhi, Rottweiler puppy Delhi, Pug puppy Delhi, Toy Poodle puppy Delhi, Maltese puppy Delhi, puppy home delivery Delhi NCR",
+      },
+      { property: "og:title", content: "Buy Puppies in Delhi NCR | The Puppy Point — 19+ Premium Breeds" },
       {
         property: "og:description",
         content:
-          "Healthy, vaccinated, ethically raised puppies from trusted breeders across Delhi NCR.",
+          "Healthy, vaccinated, ethically raised puppies from trusted breeders across Delhi NCR. Home delivery available.",
       },
+      { property: "og:url", content: "https://www.thepuppypoint.co.in/" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.thepuppypoint.co.in/" },
     ],
   }),
   component: Index,
@@ -294,9 +303,205 @@ const tips = [
   { title: "Training Basics", desc: "Positive-reinforcement methods for potty training, leash walking and gentle obedience.", emoji: "🎓" },
 ];
 
+/* ---- FAQ data ---- */
+const faqs = [
+  {
+    q: "Which puppy breeds are available in Delhi NCR?",
+    a: "We have 19+ premium breeds including Golden Retriever, Labrador, Shih Tzu, Pomeranian, German Shepherd, Siberian Husky, Beagle, Pug, French Bulldog, Maltese, Dachshund, Cocker Spaniel, Rottweiler, Toy Poodle, Bichon Frisé, Maltipoo, Tibetan Mastiff, Cavalier King Charles Spaniel, and Black German Shepherd — all available for home delivery across Delhi, Gurgaon, Noida, Faridabad, and Ghaziabad.",
+  },
+  {
+    q: "Are the puppies vaccinated and health certified?",
+    a: "Yes, every puppy from The Puppy Point is fully vaccinated as per their age schedule, dewormed, and vet-checked by certified veterinarians before being handed over. You receive a complete vaccination booklet and health certificate with your puppy.",
+  },
+  {
+    q: "Do you deliver puppies at home in Delhi NCR?",
+    a: "Absolutely! We offer safe, hand-delivered home delivery across the entire Delhi NCR region — Delhi, Gurgaon, Noida, Ghaziabad, and Faridabad. Our team ensures the puppy is comfortable and stress-free throughout the journey.",
+  },
+  {
+    q: "What is the price of puppies in Delhi NCR?",
+    a: "Puppy prices vary by breed, bloodline, and availability. We offer competitive, transparent pricing with no hidden charges. WhatsApp or call us at +91 98701 66623 for the latest pricing on any specific breed.",
+  },
+  {
+    q: "Do you provide after-adoption support?",
+    a: "Yes! We provide lifetime free expert support for your puppy's diet, grooming, training, and healthcare. Our team is available on WhatsApp 7 days a week to answer all your puppy-parenting queries.",
+  },
+  {
+    q: "Are your breeders KCI registered or certified?",
+    a: "We partner exclusively with ethical, transparent, and certified breeders across India. Many of our breeds come from KCI-registered lineages. We are fully committed to ethical breeding — no puppy mills, no compromises on health or welfare.",
+  },
+  {
+    q: "How do I enquire about a specific breed?",
+    a: "Simply WhatsApp us at +91 98701 66623 or call us directly. You can also fill out the enquiry form on this page and we'll respond within minutes. Mention your preferred breed and we'll guide you through availability and pricing instantly.",
+  },
+  {
+    q: "What areas in Delhi NCR do you serve?",
+    a: "We serve all areas across Delhi NCR including South Delhi, North Delhi, East Delhi, West Delhi, Gurgaon (Gurugram), Noida, Greater Noida, Ghaziabad, Faridabad, and surrounding areas.",
+  },
+];
+
+/* ---- JsonLdSchemas Component ---- */
+function JsonLdSchemas() {
+  const petStoreSchema = {
+    "@context": "https://schema.org",
+    "@type": "PetStore",
+    name: "The Puppy Point",
+    url: "https://www.thepuppypoint.co.in",
+    logo: "https://www.thepuppypoint.co.in/og-image.jpg",
+    description:
+      "Premium puppy boutique in Delhi NCR offering 19+ breeds of healthy, vaccinated, ethically raised puppies. Home delivery across Delhi, Gurgaon, Noida, Faridabad and Ghaziabad.",
+    telephone: "+91-98701-66623",
+    email: "contact@thepuppypoint.co.in",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Delhi",
+      addressRegion: "Delhi NCR",
+      addressCountry: "IN",
+    },
+    areaServed: [
+      { "@type": "City", name: "Delhi" },
+      { "@type": "City", name: "Gurgaon" },
+      { "@type": "City", name: "Noida" },
+      { "@type": "City", name: "Faridabad" },
+      { "@type": "City", name: "Ghaziabad" },
+    ],
+    openingHours: "Mo-Su 09:00-21:00",
+    sameAs: ["https://wa.me/919870166623"],
+    priceRange: "₹₹-₹₹₹",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "2000",
+      bestRating: "5",
+    },
+  };
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Premium Puppy Breeds Available in Delhi NCR",
+    description: "19+ premium puppy breeds for sale in Delhi NCR with home delivery.",
+    numberOfItems: breeds.length,
+    itemListElement: breeds.map((b, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: `${b.name} Puppy for Sale in Delhi NCR`,
+      description: b.desc,
+      url: "https://www.thepuppypoint.co.in/",
+    })),
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.a,
+      },
+    })),
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(petStoreSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    </>
+  );
+}
+
+/* ---- FAQ Section ---- */
+function FaqItem({ item, index }: { item: { q: string; a: string }; index: number }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.45, delay: index * 0.05 }}
+      className="overflow-hidden rounded-2xl glass-strong shadow-soft"
+    >
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-foreground transition hover:bg-white/30"
+      >
+        <span className="text-sm md:text-base leading-snug">{item.q}</span>
+        <span
+          className={`flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-gold to-gold/60 text-white transition-transform duration-300 ${open ? "rotate-45" : "rotate-0"}`}
+          aria-hidden
+        >
+          <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+          </svg>
+        </span>
+      </button>
+      {open && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="px-6 pb-5 text-sm text-muted-foreground leading-relaxed"
+        >
+          {item.a}
+        </motion.div>
+      )}
+    </motion.div>
+  );
+}
+
+function Faq() {
+  return (
+    <section id="faq" className="relative py-24">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-gold-soft/25 to-transparent" />
+      <SectionHeader
+        eyebrow="Frequently Asked Questions"
+        title={<>Everything You Need to Know About <span className="text-gradient-gold">Buying a Puppy</span></>}
+        sub="Common questions from puppy buyers across Delhi, Gurgaon, Noida and the NCR region."
+      />
+      <div className="mx-auto mt-12 max-w-4xl space-y-3 px-4">
+        {faqs.map((item, i) => (
+          <FaqItem key={i} item={item} index={i} />
+        ))}
+      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="mx-auto mt-12 max-w-2xl px-4 text-center"
+      >
+        <p className="text-muted-foreground text-sm mb-4">Still have questions? We're here 7 days a week.</p>
+        <a
+          href="https://wa.me/919870166623?text=Hi!%20I%20have%20a%20question%20about%20buying%20a%20puppy%20in%20Delhi%20NCR."
+          target="_blank"
+          rel="noopener"
+          className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:scale-105"
+        >
+          <MessageCircle className="h-4 w-4" />
+          Ask on WhatsApp
+        </a>
+      </motion.div>
+    </section>
+  );
+}
+
 function Index() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-gradient-luxury">
+      <JsonLdSchemas />
       <MouseGlow />
       <FloatingParticles />
       <Nav />
@@ -305,6 +510,7 @@ function Index() {
       <WhyUs />
       <About />
       <Testimonials />
+      <Faq />
       <Contact />
       <Footer />
       <FloatingActions />
@@ -414,6 +620,7 @@ function Nav() {
             <a href="#why" className="hover:text-foreground transition">Why Us</a>
             <a href="#about" className="hover:text-foreground transition">About</a>
             <a href="#testimonials" className="hover:text-foreground transition">Families</a>
+            <a href="#faq" className="hover:text-foreground transition">FAQ</a>
             <a href="#contact" className="hover:text-foreground transition">Contact</a>
           </nav>
           <div className="flex items-center gap-2">
@@ -454,6 +661,7 @@ function Nav() {
               <a href="#why" onClick={close} className="hover:text-gold transition">Why Us</a>
               <a href="#about" onClick={close} className="hover:text-gold transition">About</a>
               <a href="#testimonials" onClick={close} className="hover:text-gold transition">Families</a>
+              <a href="#faq" onClick={close} className="hover:text-gold transition">FAQ</a>
               <a href="#contact" onClick={close} className="hover:text-gold transition">Contact</a>
               <a
                 href={`tel:${PHONE}`}
@@ -498,9 +706,8 @@ function Hero() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Find Your Perfect{" "}
-            <span className="text-gradient-gold">Furry Companion</span>{" "}
-            in Delhi NCR
+            Buy Puppies for Sale{" "}
+            <span className="text-gradient-gold">in Delhi NCR</span>
           </motion.h1>
 
           <motion.p
@@ -1187,13 +1394,14 @@ function Footer() {
             <li><a href="#why" className="hover:text-foreground">Why Us</a></li>
             <li><a href="#about" className="hover:text-foreground">About</a></li>
             <li><a href="#testimonials" className="hover:text-foreground">Families</a></li>
+            <li><a href="#faq" className="hover:text-foreground">FAQ</a></li>
             <li><a href="#contact" className="hover:text-foreground">Contact</a></li>
           </ul>
         </div>
         <div>
           <div className="mb-3 text-sm font-semibold">Popular Breeds</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            {["Golden Retriever", "Labrador", "Pomeranian", "Shih Tzu", "Husky", "German Shepherd"].map((b) => (
+            {["Golden Retriever", "Labrador", "Pomeranian", "Shih Tzu", "Siberian Husky", "German Shepherd", "Beagle", "Rottweiler", "French Bulldog", "Toy Poodle"].map((b) => (
               <li key={b}><a href="#breeds" className="hover:text-foreground">{b}</a></li>
             ))}
           </ul>
