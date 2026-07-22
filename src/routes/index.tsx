@@ -490,7 +490,7 @@ function Faq() {
           rel="noopener"
           className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:scale-105"
         >
-          <MessageCircle className="h-4 w-4" />
+          <img src="https://static.vecteezy.com/system/resources/previews/016/716/468/original/whatsapp-icon-free-png.png" alt="WhatsApp" className="h-4 w-4 object-contain" />
           Ask on WhatsApp
         </a>
       </motion.div>
@@ -726,12 +726,13 @@ function Hero() {
             className="mt-6 flex flex-wrap gap-3 md:mt-8"
           >
             <a
-              href="#breeds"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-foreground px-5 py-3 text-sm font-semibold text-background shadow-soft transition-transform hover:scale-105 md:px-6 md:py-3.5"
+              href={`tel:${PHONE}`}
+              className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-br from-gold to-gold/70 px-7 py-4 text-base font-bold text-white shadow-glow transition-transform hover:scale-105 md:px-8 md:py-5 md:text-lg"
             >
-              <PawPrint className="h-4 w-4" />
-              View Puppies
-              <span className="absolute inset-0 -z-0 bg-gradient-to-r from-gold/0 via-gold/30 to-gold/0 opacity-0 transition group-hover:opacity-100" />
+              <span className="absolute inset-0 animate-ping rounded-full bg-gold/30" />
+              <Phone className="relative h-5 w-5 md:h-6 md:w-6" />
+              <span className="relative">Call Now</span>
+              <span className="relative text-white/80 text-sm md:text-base">{PHONE_DISPLAY}</span>
             </a>
             <a
               href={WA}
@@ -739,7 +740,7 @@ function Hero() {
               rel="noopener"
               className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-5 py-3 text-sm font-semibold text-white shadow-soft transition-transform hover:scale-105 md:px-6 md:py-3.5"
             >
-              <MessageCircle className="h-4 w-4" />
+              <img src="https://static.vecteezy.com/system/resources/previews/016/716/468/original/whatsapp-icon-free-png.png" alt="WhatsApp" className="h-4 w-4 object-contain" />
               Chat on WhatsApp
             </a>
           </motion.div>
@@ -877,7 +878,7 @@ function BreedCard({ breed, index }: { breed: (typeof breeds)[number]; index: nu
             rel="noopener"
             className="flex flex-1 items-center justify-center gap-1 rounded-full bg-whatsapp px-2 py-2 text-[10px] font-semibold text-white transition hover:opacity-90 sm:gap-1.5 sm:px-3 sm:py-2.5 sm:text-xs"
           >
-            <MessageCircle className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+            <img src="https://static.vecteezy.com/system/resources/previews/016/716/468/original/whatsapp-icon-free-png.png" alt="WhatsApp" className="h-3 w-3 sm:h-3.5 sm:w-3.5 object-contain" />
             Chat
           </a>
         </div>
@@ -1219,7 +1220,7 @@ function Contact() {
             >
               <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-whatsapp text-white shadow-glow">
-                  <MessageCircle className="h-5 w-5" />
+                  <img src="https://static.vecteezy.com/system/resources/previews/016/716/468/original/whatsapp-icon-free-png.png" alt="WhatsApp" className="h-5 w-5 object-contain" />
                 </div>
                 <div>
                   <div className="text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</div>
@@ -1311,7 +1312,7 @@ function Contact() {
                 </>
               ) : (
                 <>
-                  <MessageCircle className="h-4 w-4" /> Send via WhatsApp
+                  <img src="https://static.vecteezy.com/system/resources/previews/016/716/468/original/whatsapp-icon-free-png.png" alt="WhatsApp" className="h-4 w-4 object-contain" /> Send via WhatsApp
                 </>
               )}
             </button>
@@ -1383,7 +1384,7 @@ function Footer() {
               <Phone className="h-3.5 w-3.5" /> {PHONE_DISPLAY}
             </a>
             <a href={WA} target="_blank" rel="noopener" className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-4 py-2 text-xs font-semibold text-white">
-              <MessageCircle className="h-3.5 w-3.5" /> WhatsApp
+              <img src="https://static.vecteezy.com/system/resources/previews/016/716/468/original/whatsapp-icon-free-png.png" alt="WhatsApp" className="h-3.5 w-3.5 object-contain" /> WhatsApp
             </a>
           </div>
         </div>
@@ -1421,7 +1422,7 @@ function Footer() {
 
 function FloatingActions() {
   return (
-    <div className="fixed bottom-20 right-4 z-50 flex flex-col gap-3 sm:bottom-6 sm:right-6">
+    <div className="fixed bottom-20 right-4 z-50 flex flex-col gap-4 sm:bottom-6 sm:right-6">
       <motion.a
         href={WA}
         target="_blank"
@@ -1430,10 +1431,15 @@ function FloatingActions() {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 1.2, type: "spring" }}
-        className="group relative flex h-12 w-12 items-center justify-center rounded-full bg-whatsapp text-white shadow-glow sm:h-14 sm:w-14"
+        whileHover={{ scale: 1.12 }}
+        className="group relative flex h-16 w-16 items-center justify-center rounded-full sm:h-[72px] sm:w-[72px]"
       >
-        <span className="absolute inset-0 animate-ping rounded-full bg-whatsapp/40" />
-        <MessageCircle className="relative h-5 w-5 sm:h-6 sm:w-6" />
+        <span className="absolute inset-0 animate-ping rounded-full bg-[#25D366]/40" />
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/016/716/468/original/whatsapp-icon-free-png.png"
+          alt="WhatsApp"
+          className="relative h-16 w-16 sm:h-[72px] sm:w-[72px] object-contain drop-shadow-xl"
+        />
       </motion.a>
       <motion.a
         href={`tel:${PHONE}`}
@@ -1441,9 +1447,14 @@ function FloatingActions() {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 1.4, type: "spring" }}
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-gold to-gold/70 text-white shadow-glow sm:h-14 sm:w-14"
+        whileHover={{ scale: 1.12 }}
+        className="relative flex h-16 w-16 items-center justify-center rounded-full sm:h-[72px] sm:w-[72px]"
       >
-        <Phone className="h-5 w-5 sm:h-6 sm:w-6" />
+        <img
+          src="https://static.vecteezy.com/system/resources/thumbnails/055/426/823/small_2x/phone-icon-on-white-shape-png.png"
+          alt="Call Now"
+          className="h-16 w-16 sm:h-[72px] sm:w-[72px] object-contain drop-shadow-xl"
+        />
       </motion.a>
     </div>
   );
