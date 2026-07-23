@@ -60,7 +60,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Buy healthy, vaccinated puppies in Delhi, Gurgaon, Noida, Ghaziabad & Faridabad. 19+ premium breeds — Golden Retriever, Labrador, Pomeranian, Shih Tzu, Husky, German Shepherd & more. WhatsApp +91 98701 66623 for instant reply.",
+          "Buy healthy, vaccinated puppies in Delhi, Gurgaon, Noida, Ghaziabad & Faridabad. 19+ premium breeds — Golden Retriever, Labrador, Pomeranian, Shih Tzu, Husky, German Shepherd & more. WhatsApp +91 87963 83546 for instant reply.",
       },
       {
         name: "keywords",
@@ -82,9 +82,9 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const PHONE = "+919870166623";
-const PHONE_DISPLAY = "+91 98701 66623";
-const WA = "https://wa.me/919870166623";
+const PHONE = "+918796383546";
+const PHONE_DISPLAY = "+91 87963 83546";
+const WA = "https://wa.me/918796383546";
 
 const breeds = [
   {
@@ -319,7 +319,7 @@ const faqs = [
   },
   {
     q: "What is the price of puppies in Delhi NCR?",
-    a: "Puppy prices vary by breed, bloodline, and availability. We offer competitive, transparent pricing with no hidden charges. WhatsApp or call us at +91 98701 66623 for the latest pricing on any specific breed.",
+    a: "Puppy prices vary by breed, bloodline, and availability. We offer competitive, transparent pricing with no hidden charges. WhatsApp or call us at +91 87963 83546 for the latest pricing on any specific breed.",
   },
   {
     q: "Do you provide after-adoption support?",
@@ -331,7 +331,7 @@ const faqs = [
   },
   {
     q: "How do I enquire about a specific breed?",
-    a: "Simply WhatsApp us at +91 98701 66623 or call us directly. You can also fill out the enquiry form on this page and we'll respond within minutes. Mention your preferred breed and we'll guide you through availability and pricing instantly.",
+    a: "Simply WhatsApp us at +91 87963 83546 or call us directly. You can also fill out the enquiry form on this page and we'll respond within minutes. Mention your preferred breed and we'll guide you through availability and pricing instantly.",
   },
   {
     q: "What areas in Delhi NCR do you serve?",
@@ -349,7 +349,7 @@ function JsonLdSchemas() {
     logo: "https://www.thepuppypoint.co.in/og-image.jpg",
     description:
       "Premium puppy boutique in Delhi NCR offering 19+ breeds of healthy, vaccinated, ethically raised puppies. Home delivery across Delhi, Gurgaon, Noida, Faridabad and Ghaziabad.",
-    telephone: "+91-98701-66623",
+    telephone: "+91-87963-83546",
     email: "contact@thepuppypoint.co.in",
     address: {
       "@type": "PostalAddress",
@@ -365,7 +365,7 @@ function JsonLdSchemas() {
       { "@type": "City", name: "Ghaziabad" },
     ],
     openingHours: "Mo-Su 09:00-21:00",
-    sameAs: ["https://wa.me/919870166623"],
+    sameAs: ["https://wa.me/918796383546"],
     priceRange: "₹₹-₹₹₹",
     aggregateRating: {
       "@type": "AggregateRating",
@@ -485,7 +485,7 @@ function Faq() {
       >
         <p className="text-muted-foreground text-sm mb-4">Still have questions? We're here 7 days a week.</p>
         <a
-          href="https://wa.me/919870166623?text=Hi!%20I%20have%20a%20question%20about%20buying%20a%20puppy%20in%20Delhi%20NCR."
+          href="https://wa.me/918796383546?text=Hi!%20I%20have%20a%20question%20about%20buying%20a%20puppy%20in%20Delhi%20NCR."
           target="_blank"
           rel="noopener"
           className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:scale-105"
@@ -832,7 +832,7 @@ function Breeds() {
 function BreedCard({ breed, index }: { breed: (typeof breeds)[number]; index: number }) {
   const isVowel = /^[aeiou]/i.test(breed.name);
   const message = `Hi! I am interested in ${isVowel ? "an" : "a"} ${breed.name} puppy.`;
-  const breedWaUrl = `https://wa.me/919870166623?text=${encodeURIComponent(message)}`;
+  const breedWaUrl = `https://wa.me/918796383546?text=${encodeURIComponent(message)}`;
 
   return (
     <motion.article
@@ -1268,7 +1268,7 @@ function Contact() {
               .filter((l) => l !== null)
               .join("\n");
 
-            const waUrl = `https://wa.me/919870166623?text=${encodeURIComponent(lines)}`;
+            const waUrl = `https://wa.me/918796383546?text=${encodeURIComponent(lines)}`;
             setSent(true);
             // Small delay so user sees success state before WhatsApp opens
             setTimeout(() => {

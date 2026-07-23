@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "description", content: "Buy healthy, vaccinated, ethically raised puppies in Delhi NCR. 19+ premium breeds — Golden Retriever, Labrador, Pomeranian, Shih Tzu, Husky & more. Call or WhatsApp +91 98701 66623 for home delivery across Delhi, Gurgaon, Noida, Faridabad & Ghaziabad." },
+      { name: "description", content: "Buy healthy, vaccinated, ethically raised puppies in Delhi NCR. 19+ premium breeds — Golden Retriever, Labrador, Pomeranian, Shih Tzu, Husky & more. Call or WhatsApp +91 87963 83546 for home delivery across Delhi, Gurgaon, Noida, Faridabad & Ghaziabad." },
       { name: "keywords", content: "puppies for sale in Delhi, puppies for sale in Delhi NCR, buy puppy Delhi, buy puppy Gurgaon, buy puppy Noida, Golden Retriever puppy Delhi, Labrador puppy Delhi, Pomeranian puppy Delhi, Shih Tzu puppy Delhi, German Shepherd puppy Delhi, Husky puppy Delhi, Beagle puppy Delhi, Rottweiler puppy Delhi, French Bulldog puppy Delhi, Pug puppy Delhi, Maltese puppy Delhi, Toy Poodle puppy Delhi, puppy shop Delhi NCR, dog shop Delhi NCR, pet shop Delhi, healthy puppies Delhi, vaccinated puppies Delhi, certified puppies Delhi NCR" },
       { name: "author", content: "The Puppy Point" },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
